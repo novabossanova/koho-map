@@ -3,41 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自治体広報誌マップ</title>
-     <style>
+    <title>全国自治体広報マップ</title>
+    <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            background: url('IMG_0480.jpg') no-repeat center center/cover;
+            color: #fff;
+            position: relative;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
         }
         h1 {
-            background-color: #4CAF50;
+            font-size: 3rem;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        ul {
+            display: inline-block;
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+        .white-text {
+            color: white;
+        }
+        .notice {
+            margin-top: 20px;
+            font-size: 1rem;
             color: #fff;
-            padding: 20px;
+        }
+        .map-container {
+            width: 100%;
+            max-width: 1000px;
+            height: 600px;
+            margin-top: 20px;
         }
         iframe {
             width: 100%;
-            height: 600px;
+            height: 100%;
             border: 0;
         }
     </style>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7489382514081890"
-     crossorigin="anonymous"></script>
-    
 </head>
 <body>
-    <h1>全国自治体広報誌マップ</h1>
-    <p>地図上の自治体名付近のマーカーをクリックすると、各広報誌に飛びます。</p>
-    <p>移住・ふるさと納税の参考に。</p>
-    <div style="text-align: center;">
-    <ul style="display: inline-block; text-align: left; list-style: none; padding: 0;">
-        <li style="color: red;">🔴赤…都道府県広報誌</li>
-        <li style="color: blue;">🔵青…市町村広報誌、東京23区広報誌</li>
-        <li style="color: green;">🟢緑…Webで確認できる広報誌が見つからなかった自治体</li>
-    </ul>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>全国自治体広報誌マップ</h1>
+        <p>地図上の自治体名付近のマーカーをクリックして、各広報誌をチェック！</p>
+        <p>移住・ふるさと納税の参考に。</p>
+        <div style="text-align: center;">
+            <ul>
+                <li><span style="color: red;">🔴</span><span class="white-text">赤…都道府県広報誌</span></li>
+                <li><span style="color: blue;">🔵</span><span class="white-text">青…市町村広報誌、東京23区広報誌</span></li>
+                <li><span style="color: green;">🟢</span><span class="white-text">緑…Webで確認できる広報誌が見つからなかった自治体</span></li>
+            </ul>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OP70JL19dTOlBRxIArZvBA3Xt1oFG8w&ehbc=2E312F"></iframe>
+        </div>
+        <p class="notice">＊当サイトは個人的に全国の広報誌を収集したものであり、各自治体や広報誌の内容と一切関係ありません。</p>
     </div>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OP70JL19dTOlBRxIArZvBA3Xt1oFG8w&ehbc=2E312F" width="640" height="480"></iframe>
 </body>
 </html>
+
