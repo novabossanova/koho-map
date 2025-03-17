@@ -63,14 +63,16 @@
             height: 100%;
             border: 0;
         }
-         .ad-container1 {
-            text-align: center; /* 広告を中央配置 */
-            margin-top: 20px;   /* コンテンツとの間隔 */
+        .ad-container1 {
+            text-align: center;
+            margin: 10px 0;  /* 上下の余白を10pxに調整 */
+            padding: 0;       /* 不要な余白をリセット */
         }
-        .ad-container1 img {
-            width: 100%;       /* 画面幅いっぱいに拡大 */
-            max-width: 468px;  /* 最大幅は468pxに制限 */
-            height: auto;      /* アスペクト比維持 */
+        .ad-image {
+            display: block;   /* 下の余白をなくす */
+            margin: 10px auto; /* 中央揃え＆上下面の余白調整 */
+            width: 100%;       /* スマホ対応 */
+            max-width: 468px;  /* PCでは最大468px */
         }
     </style>
 </head>
@@ -81,23 +83,20 @@
         <p>地図上の自治体名付近のマーカーをクリックして各広報誌をチェック！</p>
         <p>移住・ふるさと納税の参考に。</p>
 
-         
-    <div class="ad-container1">
-    <!-- テキストリンク広告 -->
-    <a href="https://px.a8.net/svt/ejp?a8mat=4514ND+GB1IC2+AD2+2BETUQ" rel="nofollow">
+        <div class="ad-container1">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4514ND+GB1IC2+AD2+2BETUQ" rel="nofollow">
         超お得なツアーを多数掲載！ニーズツアー
-    </a>
-    <img border="0" width="1" height="1" 
+        </a>
+        <img border="0" width="1" height="1" 
          src="https://www14.a8.net/0.gif?a8mat=4514ND+GB1IC2+AD2+2BETUQ" alt="">
 
-    <!-- バナー広告 -->
-    <a href="https://px.a8.net/svt/ejp?a8mat=4514ND+GB1IC2+AD2+2BEM4X" rel="nofollow">
-        <img border="0" width="468" height="60" alt=""
+        <a href="https://px.a8.net/svt/ejp?a8mat=4514ND+GB1IC2+AD2+2BEM4X" rel="nofollow">
+        <img class="ad-image" border="0" width="468" height="60" alt=""
              src="https://www26.a8.net/svt/bgt?aid=250315465986&wid=005&eno=01&mid=s00000001343014009000&mc=1">
-    </a>
-    <img border="0" width="1" height="1" 
+        </a>
+        <img border="0" width="1" height="1" 
          src="https://www19.a8.net/0.gif?a8mat=4514ND+GB1IC2+AD2+2BEM4X" alt="">
-    </div>
+        </div>
         
         <div style="text-align: center;">
             <ul>
